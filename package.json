@@ -1,0 +1,24 @@
+{
+  "name": "webpackjs",
+  "version": "1.0.0",
+  "description": "webpack practice from http://www.webpackjs.com",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luopojianshi/webpackjs.git"
+  },
+  "keywords": [],
+  "author": "luopojianshi <luopojianshi@163.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luopojianshi/webpackjs/issues"
+  },
+  "homepage": "https://github.com/luopojianshi/webpackjs#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
