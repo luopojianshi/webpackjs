@@ -6,6 +6,9 @@ module.exports = {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	performance: {
+		hints: false
+	},
 	module: {
 		rules: [
 			{
@@ -17,6 +20,12 @@ module.exports = {
 			},
 			{
 				test: /\.(png|svg|jpg|gif)$/,
+				use: [
+					'file-loader'
+				]
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				use: [
 					'file-loader'
 				]
