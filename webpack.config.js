@@ -2,17 +2,14 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	entry: {
-		index: './src/index.js'
-	},
+	entry: './src/index.js',
 	plugins: [
 		new HTMLWebpackPlugin({
-			title: 'Code Splitting 代码分离'
+			title: 'Caching 缓存'
 		})
 	],
 	output: {
-		filename: '[name].bundle.js',
-		chunkFilename: '[name].bundle.js',
+		filename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, 'dist')
 	}
 }
