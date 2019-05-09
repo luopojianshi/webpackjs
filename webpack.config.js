@@ -1,5 +1,5 @@
 const path = require('path')
-// const webpack = require('webpack')
+const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
@@ -11,19 +11,19 @@ module.exports = {
 			title: 'Caching 缓存'
 		})
 	],
-	// optimization: {
-	// 	splitChunks: {
-	// 		cacheGroups: {
-	// 			commons: {
-	// 				name: 'manifest',
-	// 				chunks: 'initial',
-	// 				minChunks: 2
-	// 			}
-	// 		}
-	// 	}
-	// },
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					name: 'manifest',
+					chunks: 'initial',
+					minChunks: 2
+				}
+			}
+    },
+    runtimeChunk: 'single'
+	},
 	output: {
-    // filename: '[name].[chunkhash].js',
     filename: '[name].[chunkhash].js',
 		path: path.resolve(__dirname, 'dist')
 	}
